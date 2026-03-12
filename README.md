@@ -35,41 +35,6 @@ http://localhost:5173
 ```
 Create an account → start tracking!
 
-## How It Works Now
-
-```
-YOU (ali)                     YOUR FRIEND (sara)
-    │                              │
-    ▼                              ▼
-┌─────────┐                  ┌──────────┐
-│  Login   │                  │  Login   │
-│ ali/pass │                  │ sara/pass│
-└────┬─────┘                  └────┬─────┘
-     │                              │
-     ▼                              ▼
-┌────────────────────────────────────────┐
-│           YOUR SERVER                  │
-│  "ali is asking" → WHERE user_id = 1  │
-│  "sara asking"  → WHERE user_id = 2   │
-└──────────────────┬─────────────────────┘
-                   │
-                   ▼
-┌────────────────────────────────────────┐
-│     PostgreSQL (Neon Cloud)            │
-│                                        │
-│  tasks:                                │
-│  ┌────┬───────────┬─────────┐          │
-│  │ id │ title     │ user_id │          │
-│  ├────┼───────────┼─────────┤          │
-│  │ 1  │ Buy milk  │ 2 (sara)│ ← sara  │
-│  │ 2  │ Go to gym │ 1 (ali) │ ← ali   │
-│  └────┴───────────┴─────────┘          │
-│                                        │
-│  Ali sees ONLY "Go to gym"             │
-│  Sara sees ONLY "Buy milk"             │
-└────────────────────────────────────────┘
-```
-
 ## Deploy to Railway
 1. Push to GitHub
 2. railway.app → New Project → Deploy from GitHub

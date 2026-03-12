@@ -1,4 +1,4 @@
-# Life Tracker v2 — With User Accounts + Cloud Database
+# Life Tracker  — With User Accounts + Cloud Database
 
 Each user gets their own private data. PostgreSQL (Neon) cloud database.
 
